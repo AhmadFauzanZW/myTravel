@@ -9,26 +9,15 @@ function formValidation() {
     }
 }
 
-let indexSlide = 1;
-showSlide(1);
+document.addEventListener('DOMContentLoaded', function() {
+    const carousel = document.querySelector('.carousel');
+    const images = ['image1', 'image2', 'image3'];
+    let currentIndex = 0;
 
-function nextSlide(n) {
-    showSlide(indexSlide += n);
-}
-
-function showSlide(n) {
-    let listImage = document.getElementsByClassName('main-content-banner')
-    console.log(listImage);
-
-    if (n > listImage.length) indexSlide = 1;
-    
-    let index = 0;
-    while (index < listImage.length) {
-        listImage[index].style.display = 'none';
-        index++;
+    function showNextImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        carousel.className = 'carousel ' + images[currentIndex];
     }
 
-    listImage[indexSlide - 1].style.display = 'block';
-}
-
-setInterval(() => nextSlide(1), 3000);
+    setInterval(showNextImage, 3000);
+});

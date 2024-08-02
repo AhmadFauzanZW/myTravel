@@ -111,32 +111,37 @@ main {
     margin: 12px;
 }
 
+.hero {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+}
+
 .main-content-banner {
-    display: block;
     width: 100%;
     height: 60vh;
     border-radius: 5px;
 }
 
-.banner1 {
-    background-image: url(../assets/Travel-Agent1.jpg);
-    background-position: center center;
+.carousel {
+    width: 100%;
+    height: 100%;
     background-size: cover;
-    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-image 1s ease-in-out;
 }
 
-.banner2 {
-    background-image: url(../assets/Travel-Agent2.jpg);
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
+.image1 {
+    background-image: url('../assets/Travel-Agent1.jpg');
 }
 
-.banner3 {
-    background-image: url(../assets/Travel-Agent3.jpg);
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
+.image2 {
+    background-image: url('../assets/Travel-Agent2.jpg');
+}
+
+.image3 {
+    background-image: url('../assets/Travel-Agent3.jpg');
 }
 
 .image-one {
